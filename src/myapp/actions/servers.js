@@ -15,9 +15,9 @@ const addcp = (state = [], action) => {
   switch (action.type) {
     case 'INCREMENT_COUNTER':
       return (
-
-      			state = podata
-
+          podata.map((indexs,addcp)=>{
+            return state = indexs.text
+          })
       	)
     case 'DECREMENT':
       return "花1花"

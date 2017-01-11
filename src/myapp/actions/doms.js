@@ -5,10 +5,10 @@ class boxs extends Component{
 
   render(){
     const {onIncrement,onIncrements,counter,mast} = this.props;
-    console.log(counter[1])
+    console.log(counter)
      return(
         <div>
-          <p>{counter.text}</p>
+          <p>{counter[1]}</p>
           <p>{mast}</p>
           <button style={{background:'red'}} onClick={onIncrement}>+</button>
           <button onClick={onIncrements}>-</button>

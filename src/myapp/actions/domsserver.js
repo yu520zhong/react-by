@@ -4,6 +4,7 @@ import chenshi from './doms'
 
 
 const myapp = (state) =>{  //给予数据在渲染层的
+
 	return{
 		counter: state.addcp
 	}
