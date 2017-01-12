@@ -4,12 +4,19 @@ import chenshi from './doms'
 
 
 const myapp = (state) =>{  //给予数据在渲染层的
-
 	return{
-		counter: state.addcp
+		counter: state.addcp,
+    doemvalue:state.addcpp
 	}
 }
 
+
+const onetiome = (text) => {
+  return{
+    type:"INCREMENT_COUNTERA",
+    text
+  }
+}
 
 
 const onIncrement =() => {
@@ -28,7 +35,8 @@ const onIncrements =() => {
 function mapDispatchToProps(dispatch) {
   return {
 		onIncrement: bindActionCreators(onIncrement, dispatch),
-		onIncrements: bindActionCreators(onIncrements, dispatch)
+		onIncrements: bindActionCreators(onIncrements, dispatch),
+    onetiome:bindActionCreators(onetiome, dispatch),
 	}
 }
 export default connect(myapp,mapDispatchToProps)(chenshi)

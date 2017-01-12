@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+
       	const podata = [
 				  {
 				    text: 'Eat food',
@@ -19,8 +20,6 @@ const addcp = (state = [], action) => {
             return state = indexs.text
           })
       	)
-    case 'DECREMENT':
-      return "花1花"
     default:
       return state
   }
@@ -31,8 +30,10 @@ const addcp = (state = [], action) => {
 
 const addcpp = (state = "花花",action) => {
 	switch (action.type) {
-    case 'INCREMENT_COUNTER1':
-      return state + 1
+    case 'INCREMENT_COUNTERA':
+      return (
+          state = action.text
+      )
     default:
       return state
   }
