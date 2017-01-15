@@ -11,7 +11,7 @@ export const VisibilityFilters = {
 
 
 export function addTodo(text) {
-  return { type: ADD_TODO, text }
+  return { type: SET_VISIBILITY_FILTER, text }
 }
 
 export function completeTodo(index) {
@@ -19,5 +19,5 @@ export function completeTodo(index) {
 }
 
 export function setVisibilityFilter(filter) {
-  return { type: SET_VISIBILITY_FILTER, filter }
+  return { type: SET_VISIBILITY_FILTER1, filter }
 }

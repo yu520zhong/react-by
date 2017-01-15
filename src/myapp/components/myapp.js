@@ -1,19 +1,27 @@
 import React, { Component, PropTypes } from 'react'
 import {connect} from 'react-redux'
 import {VisibilityFilters,addTodo,completeTodo,setVisibilityFilter} from './myaction'
-import AddTodo from './myaddtodo'
+import Addtodo from './myaddtodo'
 class App extends Component{
 	render(){
-		<AddTodo
-			onAddClick={text=>{ //处理 按钮 并且获取valuen内容
-				dispatch(addTodo(text))
-			}}
-		>
-
-		<todulist
-			
-
-		/>
-
+		const { dispatch, visibleTodos, visibilityFilter } = this.props
+		return(
+			<div>
+			<Addtodo
+	          onAddClick={text =>
+	            dispatch(addTodo(text))
+	          } />
+	          </div>
+			)
 	}
 }
+
+
+const select = (state)=>{
+  return {
+    visibilityFilter: state.visibilityFilter
+  }
+}
+
+
+export default connect(select)(App)
