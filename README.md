@@ -70,3 +70,7 @@
 - 使用了模块化编程后，页面整体逻辑变得清晰很多，每个模块里的css和js都只负责管理一个对应的组件。尤其是用了css这一块，用css-loader开启CSS-Modules后，就再也不用为类名的语义化和重复去烦恼
 
 
+一想项目案列：http://react-china.org/t/demo-react-react-router-webpack-babel-node-express-mongodb/9103
+redux-amrc
+
+

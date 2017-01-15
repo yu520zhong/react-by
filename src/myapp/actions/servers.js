@@ -17,7 +17,7 @@ const addcp = (state = [], action) => {
     case 'INCREMENT_COUNTER':
       return (
           podata.map((indexs,addcp)=>{
-            return state = indexs.text
+            return indexs.text
           })
       	)
     default:
