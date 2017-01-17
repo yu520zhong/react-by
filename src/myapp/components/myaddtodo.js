@@ -5,7 +5,7 @@ export default class AddTodo extends Component {
     return (
       <div>
         <input type='text' ref='input' />
-        <button onClick={(e) => this.handleClick(e)}>
+        <button onClick={() => this.handleClick()}>
           Add
         </button>
         <p>text:{}</p>
@@ -13,7 +13,7 @@ export default class AddTodo extends Component {
     )
   }
 
-  handleClick(e) {
+  handleClick() {
     const node = this.refs.input
     const text = node.value.trim()
     this.props.onAddClick(text)

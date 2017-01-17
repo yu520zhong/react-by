@@ -2,15 +2,23 @@ import React, { Component, PropTypes } from 'react'
 import {connect} from 'react-redux'
 import {VisibilityFilters,addTodo,completeTodo,setVisibilityFilter} from './myaction'
 import Addtodo from './myaddtodo'
+import TodoList from './TodoList'
+import { Link } from 'react-router';
 class App extends Component{
 	render(){
-		const { dispatch, visibleTodos, visibilityFilter } = this.props
+
+		const {dispatch,visibleTodos, visibilityFilter} = this.props
+
 		return(
 			<div>
 			<Addtodo
 	          onAddClick={text =>
 	            dispatch(addTodo(text))
-	          } />
+	          }/>
+			<li><Link to="message">About</Link></li>
+	 		<TodoList
+	          todo = {visibleTodos}
+	          />
 	          </div>
 			)
 	}
@@ -19,7 +27,7 @@ class App extends Component{
 
 const select = (state)=>{
   return {
-    visibilityFilter: state.visibilityFilter
+    visibleTodos:state.todos,
   }
 }
 

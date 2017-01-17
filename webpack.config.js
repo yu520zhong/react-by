@@ -11,12 +11,12 @@ var outpath = './build'
 module.exports = {
 	devtool: 'eval',
     devServer: {
-        // proxy: {
-        //     // {
-        //     //     target: "http://99.48.46.186",//后台服务器所在的地址
-        //     //     secure: false
-        //     // }
-        // },
+        proxy: {
+            "/api": {
+                target: "https://cnodejs.org",//后台服务器所在的地址
+                secure: false
+            }
+        },
         contentBase: "./public",//本地服务器所加载的index.html所在的目录
         colors: true,//终端中输出结果为彩色
         historyApiFallback: true,//不跳转
