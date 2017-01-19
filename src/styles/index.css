@@ -1,14 +1,4 @@
 /*Normalize.css 只是一个很小的CSS文件，但它在默认的HTML元素样式上提供了跨浏览器的高度一致性*/
-@import '~normalize.css/normalize.css';
-@import "~github-markdown-css/github-markdown.css";
-
-@font-face {font-family: "iconfont";
-  src: url('iconfont/iconfont.eot'); /* IE9*/
-  src: url('iconfont/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont/iconfont.woff') format('woff'), /* chrome, firefox */
-  url('iconfont/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
-}
 
 .iconfont {
   font-family:"iconfont" !important;
@@ -40,4 +30,14 @@ a:hover,a:link,a:visited,a:active{
 @keyframes fadeIn{
     0%{opacity:0;}
     100%{opacity:1;}
+}
+
+.mst{
+  background: red;
+}
+
+.mstt{
+  width: 20%;
+  float: left;
+  text-align: center;
 }

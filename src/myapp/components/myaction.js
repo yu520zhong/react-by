@@ -30,34 +30,33 @@ export function setVisibilityFilter(filter) {
   return { type: SET_VISIBILITY_FILTER1, filter }
 }
 
+const receiveTopics = (txt) => ({
+  type:SWITCH_SUPPORT,
+  txt
+})
 
 
+// function  fetchPosts(){
+//   return dispatch => {
+//       fetch('https://cnodejs.org/api/v1/topics')
+//       .then(response => response.json())
+//       .then(datas =>{
+//             console.log(datas)
+//             dispatch(
+//               type:SWITCH_SUPPORT,
+//               txt:"3333"    
+//               )
+//               }
+//         )  
+//     }
+// }
 
 
-
-
-function  fetchPosts(){
-  return dispatch => {
-      fetch('https://cnodejs.org/api/v1/topics')
-      .then(response => response.json())
-      .then(datas =>{
-            console.log(datas)
-            dispatch(
-              type:SWITCH_SUPPORT,
-              txt:"3333"    
-              )
-              }
-        )  
-    }
-}
-
-
-
-export function fetchPostsIfNeeded(subreddit){
-  return (dispatch, getState) => {
-
-      return dispatch(fetchPosts(subreddit))
-    
+export const getCollectedTopics = () => {
+  return ()=>{
+    alert("3")
   }
+      
+
 }
 

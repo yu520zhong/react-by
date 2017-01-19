@@ -35,12 +35,15 @@ function todos(state = [], action) {
 }
 
 
-function swit(state = '5',action){
+function swit(state = [],action){
   switch (action.type) {
     case SWITCH_SUPPORT:
-    return action.txt
-    
-
+    return [
+      ...state,
+      {
+        txt:action.txt
+      }
+    ]
     default:
       return state
   }
