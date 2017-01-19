@@ -12,6 +12,22 @@ export const VisibilityFilters = {
 };
 
 
+export const getCollectedTopics = () => {
+   return dispatch=>{
+    fetch('https://cnodejs.org/api/v1/topics')
+      .then(response => response.json())
+      .then(datas =>{
+          console.log(datas)
+          dispatch({
+             type:SWITCH_SUPPORT,
+             txt:datas
+          })
+              }
+        ) 
+   }
+}
+
+
 export function addTodo(text) { 
   return { 
   	type: SET_VISIBILITY_FILTER, 
@@ -35,28 +51,19 @@ const receiveTopics = (txt) => ({
   txt
 })
 
-
-// function  fetchPosts(){
-//   return dispatch => {
-//       fetch('https://cnodejs.org/api/v1/topics')
-//       .then(response => response.json())
-//       .then(datas =>{
-//             console.log(datas)
-//             dispatch(
-//               type:SWITCH_SUPPORT,
-//               txt:"3333"    
-//               )
-//               }
-//         )  
-//     }
-// }
-
-
-export const getCollectedTopics = () => {
-  return ()=>{
-    alert("3")
-  }
-      
-
+function  fetchPosts(){
+    return dispatch=>{
+      fetch('https://cnodejs.org/api/v1/topics')
+      .then(response => response.json())
+      .then(datas =>{
+              dispatch({
+                type:SWITCH_SUPPORT,
+                txt:"datas"
+              }) 
+              }
+        )  
+    }
 }
+
+
 

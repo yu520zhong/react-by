@@ -1,15 +1,24 @@
 import React from 'react'
 import { Router, Route, browserHistory,hashHistory} from 'react-router';
 import {render} from 'react-dom'
-import {createStore} from 'redux'
+import {createStore,applyMiddleware,compose} from 'redux'
 import {Provider} from 'react-redux'
+
+import createLogger from 'redux-logger';
+import thunk from 'redux-thunk';
+
 
 import App from './myapp'
 import servers from './servers'
 import Todom from './todom'
 
+let enhancer = compose(
+        applyMiddleware(thunk, createLogger()),
+        // applyMiddleware(thunk),
+        window.devToolsExtension ? window.devToolsExtension() : f => f
+);
 
-const stores = createStore(servers)
+const stores = createStore(servers,enhancer)
 
 render(
 	<Provider store={stores}>

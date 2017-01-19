@@ -65,9 +65,9 @@ componentDidMount() {
 
   }
 
-
   render() {
   	const {dispatch,modoss} = this.props
+
     return (
       <div>
       	<button onClick={()=>{
@@ -75,11 +75,23 @@ componentDidMount() {
         }}>
       	submit
       	</button>
-      	<p style={{opacity:this.state.opacity}}>内容{modoss.map((todo,index)=>{
-          return(
-            todo.txt
-          )
-        })}</p>
+      	
+        <div>
+              {
+                modoss.map((todos,indx) => {
+                return(
+                  <li style={{banckground:"red"}} key={indx}>{
+                    todos.txt.data.map((toms,i)=>{
+                      return(
+                        <div>123</div>
+                      )
+                    })
+                  }</li>
+                  )
+              })}
+        </div>
+
+
 
         <div>
          {this.tabs.map((tod,index)=>{
@@ -98,9 +110,12 @@ componentDidMount() {
 
 
 const apphebing = (state) => {
+
 	return{
-		modoss:state.swit
+		modoss:state.swit,
+  
 	}
+    console.log(modoss+"555555555555555555555555555555555555555555555555555555555")
 }
 
 export default connect(apphebing)(AddTodo)
