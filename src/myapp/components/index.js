@@ -11,6 +11,7 @@ import thunk from 'redux-thunk';
 import App from './myapp'
 import servers from './servers'
 import Todom from './todom'
+import ppst from './todoss'
 
 let enhancer = compose(
         applyMiddleware(thunk, createLogger()),
@@ -25,6 +26,7 @@ render(
 		<Router history={hashHistory}>
 	      <Route path="/" component={App} />
 	      <Route path='message' component={Todom}/>
+	      <Route path='ppst' component={ppst}/>
 	    </Router>
 	</Provider>,
 	document.getElementById('root')

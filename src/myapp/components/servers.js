@@ -41,7 +41,7 @@ function swit(state = [],action){
     return [
       ...state,
       {
-        txt:action.txt
+        test:action.txt
       }
     ]
     default:

@@ -16,6 +16,7 @@ class App extends Component{
 	            dispatch(addTodo(text))
 	          }/>
 			<li><Link to="message">About</Link></li>
+			<li><Link to="ppst">Aboutt</Link></li>
 	 		<TodoList
 	          todo = {visibleTodos}
 	          />
