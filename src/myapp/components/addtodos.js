@@ -8,7 +8,7 @@ import style from'../../styles/index.css';
 
  const AddTodo = ({lost}) =>(
     <div>
-         {console.log(lost)}
+
     </div>
  )
 

@@ -21,7 +21,6 @@ export const getCollectedTopics = () => {
              type:SWITCH_SUPPORT,
              txt:datas
           })
-          
               }
         ) 
    }
