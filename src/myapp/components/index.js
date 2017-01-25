@@ -20,7 +20,7 @@ const stores = createStore(servers,enhancer)
 
 render(
 	<Provider store={stores}>
-		<Router history={hashHistory}>
+		<Router history={browserHistory}>
 	      <Route path="/" component={App} />
 	      <Route path='message' component={Todom}/>
 	      <Route path='ppst' component={ppst}/>

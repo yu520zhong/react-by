@@ -5,7 +5,8 @@ import {createStore,applyMiddleware,compose} from 'redux'
 import {Provider} from 'react-redux'
 import createLogger from 'redux-logger';
 import thunk from 'redux-thunk';
-
+import App from './app';
+import servers from './servert'
 
 
 
@@ -14,11 +15,11 @@ let enhancer = compose(
         window.devToolsExtension ? window.devToolsExtension() : f => f
 );
 
-const stores = createStore(servers,enhancer)
+const stores = createStore(servers,enhancer);
 
 render(
 	<Provider store={stores}>
-		<Router history={hashHistory}>
+		<Router history={browserHistory}>
 	      <Route path="/" component={App} />
 	    </Router>
 	</Provider>,
