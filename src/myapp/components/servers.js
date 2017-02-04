@@ -2,7 +2,7 @@ import {combineReducers} from 'redux'
 import { ADD_TODO, COMPLETE_TODO, SET_VISIBILITY_FILTER, VisibilityFilters,SWITCH_SUPPORT} from './myaction'
 const { SHOW_ALL } = VisibilityFilters
 
-function visibilityFilter(state = SHOW_ALL, action) {
+function visibilityFilter(state = "SHOW_AL1L", action) {
   switch (action.type) {
     case COMPLETE_TODO:
       return action.text

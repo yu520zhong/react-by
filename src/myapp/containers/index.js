@@ -7,7 +7,7 @@ import createLogger from 'redux-logger';
 import thunk from 'redux-thunk';
 import App from './app';
 import servers from './servert'
-
+import taps from './tap'
 
 
 let enhancer = compose(
@@ -21,7 +21,11 @@ render(
 	<Provider store={stores}>
 		<Router history={browserHistory}>
 	      <Route path="/" component={App} />
+	      <Route path="tapgo" component={taps} />
 	    </Router>
 	</Provider>,
 	document.getElementById('root')
 	)                                                    
+
+
+

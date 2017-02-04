@@ -34,13 +34,13 @@ var plugins = [
 var outpath = './build/production'
 
 module.exports = {
-    entry: [
-        './src/index.js'
+    entry: [   //文件入口
+        './src/myapp/containers/index.js'
     ],
-    output: {
+    output: {  //出口  编译后的文件
         path: outpath,
-        publicPath: '/assets/',
-        filename: 'bundle.js' //结束最终JS文件
+        publicPath: '/assets/', //文件夹名字
+        filename: 'bundle.js' //js姓名
     },
     module: {
         loaders: [

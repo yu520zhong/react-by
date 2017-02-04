@@ -13,3 +13,28 @@ export function addTodo(text) {
   }
 }
 
+export const VisibilityFilters = [
+      {
+          title: '全部', 
+          filter: 'all',
+      },
+      {
+          title: '精华',
+          filter: 'good',
+      },
+      {
+          title: '分享',
+          filter: 'share',
+      },
+      {
+          title: '问答',
+          filter: 'ask',
+      },
+      {
+          title: '招聘',
+          filter: 'job',
+      }
+  ]
+
+
+

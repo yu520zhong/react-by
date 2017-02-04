@@ -20,7 +20,7 @@ class App extends Component{
 	 		<TodoList
 	          todo = {visibleTodos}
 	          />
-	         	<div>{console.log(Visiters)}</div>
+	         	<div>{Visiters}</div>
 	          </div>
 			)
 	}

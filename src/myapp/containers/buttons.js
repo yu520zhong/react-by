@@ -5,13 +5,9 @@ import { Link} from 'react-router';
 
 
 
- const AddTodo = ({lost}) =>(
-    <div>
-       <button className='onebuton'>提交</button>
-       <button className='onebuton'>{lost}</button>
-    </div>
+ const AddTodo = ({lost,myclick}) =>(
+       <button onClick={myclick} className='onebuton'>{lost}</button>
  )
-
 
 
 export default AddTodo

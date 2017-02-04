@@ -4,7 +4,7 @@ import {getCollectedTopics} from './myaction'
 import fetch from 'isomorphic-fetch'
 import { Link} from 'react-router';
 import style from'../../styles/index.css';
-import AddTodo from './addtodos'
+
 
 const tabs = [
       {
@@ -78,7 +78,7 @@ class TabComponent extends Component{
     const mus= this.props.children
     return(
         <div>
-          <AddTodo lost={'3333'}/>
+   
           <div className="container">
               
           <TabsControl lost={mus}>
