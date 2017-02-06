@@ -8,7 +8,7 @@ import thunk from 'redux-thunk';
 import App from './app';
 import servers from './servert'
 import taps from './tap'
-
+import Aremover from './myadd'
 
 let enhancer = compose(
         applyMiddleware(thunk, createLogger()),
@@ -19,9 +19,10 @@ const stores = createStore(servers,enhancer);
 
 render(
 	<Provider store={stores}>
-		<Router history={browserHistory}>
+		<Router history={hashHistory}>
 	      <Route path="/" component={App} />
 	      <Route path="tapgo" component={taps} />
+	      <Route path="myadds" component={Aremover} />
 	    </Router>
 	</Provider>,
 	document.getElementById('root')

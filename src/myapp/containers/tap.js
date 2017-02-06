@@ -2,8 +2,8 @@ import React, { Component, PropTypes } from 'react'
 import {connect} from 'react-redux'
 import AddTodot from './buttons'
 import {addTodo} from './seraction'
-import {Link} from 'react-router'
-
+import only from './mystyle/only.scss'
+import styles from './mystyle/tow.scss'
 
 class Todotaps extends Component{
 	constructor(){
@@ -15,20 +15,20 @@ class Todotaps extends Component{
 	render(){
 		return(
 			<div>
-				<div className='ulsty'>
+				<div className={styles.ulsty}>
 					<ul>
 						{this.props.mytops.map((intodo,i)=>{
 							return(
-								<li onClick={this.taptallie.bind(this,i)} className={i==this.state.cullr?'toptaill':''} key={i}>{intodo.title}</li>
+								<li onClick={this.taptallie.bind(this,i)} className={i==this.state.cullr?styles.toptaill:''} key={i}>{intodo.title}</li>
 								)
 						})}
 					</ul>
 				</div>
-				<div className='topbut'>
+				<div className={styles.topbut}>
 					<ul>
 						{React.Children.map(this.props.children,(todotop,i)=>{
 							return(
-								<li key={i} className={[i==this.state.cullr?'denglunondes':'denglunonde'].join(' ')}>
+								<li key={i} className={[i==this.state.cullr?styles.denglunondes:styles.denglunonde].join(' ')}>
 									{todotop}
 								</li>
 							)

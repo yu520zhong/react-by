@@ -1,7 +1,5 @@
 import {combineReducers} from 'redux' //数据合并
-import {ADD_TODO,VisibilityFilters} from './seraction'
-const mytops = VisibilityFilters
-
+import {ADD_TODO,VisibilityFilters,Myremove,SWITCH_SUPPORT,COMPLETE_TODO} from './seraction'
 
 
 function visibilityFilter(state = 'SHOW_ALL', action) {
@@ -13,12 +11,13 @@ function visibilityFilter(state = 'SHOW_ALL', action) {
   }
 }
 
-const addcpp = (state = mytops,action) => {
+const addcpp = (state = VisibilityFilters,action) => {
 	switch (action.type) {
-    case 'INCREMENT_COUNTERA':
-      return (
-          state = action.text
-      )
+    case COMPLETE_TODO:
+      return {
+          ...state,
+          state : action.text
+      }
     default:
       return state
   }
@@ -26,9 +25,27 @@ const addcpp = (state = mytops,action) => {
 
 
 
+const Myremoves =(state = Myremove,action)=>{
+  switch(action.type){
+    default:
+      return state
+  }
+}
+
+const myserveradd = (state = [],action)=>{
+  switch (action.type) {
+    case SWITCH_SUPPORT:
+     return action.servers
+    default:
+      // statements_def
+      break;
+  }
+}
+
 const todoApp = combineReducers({
   visibilityFilter,
-  addcpp
+  addcpp,
+  Myremoves
 })
 
 export default todoApp

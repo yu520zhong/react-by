@@ -3,6 +3,9 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router'
 import AddTodot from './buttons'
 import {addTodo} from './seraction'
+import only from './mystyle/only.scss'
+import styles from './mystyle/tow.scss'
+
 
 class Denglu extends Component{  //组建嵌套  登陆组建
 
@@ -17,16 +20,16 @@ class Denglu extends Component{  //组建嵌套  登陆组建
 	render(){
 		const {dispatch} = this.props;
 		return(
-			<div className="oneclass" style={{paddingTop:'35%'}}>
-				<div className={[this.state.denglu?'':'denglunonde','headerinput'].join(' ')}>
-				    <input className={this.state.inputname?'':'headerinputt'} 
+			<div className={styles.oneclass} style={{paddingTop:'35%'}}>
+				<div className={[this.state.denglu?'':styles.denglunonde,styles.headerinput].join(' ')}>
+				    <input className={this.state.inputname?'':styles.headerinputt} 
 						onFocus={this.onchengs.bind(this)} 
 						onBlur={this.onblurs.bind(this)} 
 						type='text' ref='input'
 					/>
 					<input ref='posst' type='password'/>
 					<AddTodot myclick={this.qingkong.bind(this)} lost={'取消'}/>
-					<button onClick={this.handleClick.bind(this)} className='onebuton'>提交</button>
+					<button onClick={this.handleClick.bind(this)} className={styles.onebuton}>提交</button>
 				</div>
 				<Zhuye Visiterstb={this.props.Visitersta} mythis={this.state.denglu} Visiterst={this.props.Visiterst}/>
 			</div>
@@ -69,19 +72,16 @@ class Denglu extends Component{  //组建嵌套  登陆组建
 class Zhuye extends Component{ //登陆后显示的内容
 	render(){
 		return(
-			<div className={[this.props.mythis?'denglunonde':'','mygo'].join(' ')}>
+			<div className={[this.props.mythis?styles.denglunonde:'',styles.mygo].join(' ')}>
 				<p>{this.props.Visiterstb}:你好，欢迎登陆</p>
 				<ul>
 					<li><Link to="tapgo">点击此处多页面</Link></li>
+					<li><Link to="myadds">点击添加删除</Link></li>
 				</ul>
 			</div>
 			)
 	}
 }
-
-
-
-
 
 
 class App extends Component{  //总控制台
@@ -98,10 +98,9 @@ class App extends Component{  //总控制台
 	render(){
 		const {Visiterst} = this.props;
 		return(
-			<div style={{height:this.state.heights}} className={'oneapp'}>
+			<div style={{height:this.state.heights}} className={styles.oneapp}>
 				<Denglu Visitersta={Visiterst} post={this.state.heights} dispatch={this.props.dispatch}/>
 			</div>
-
 			)
 	}
 
