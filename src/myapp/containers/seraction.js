@@ -30,7 +30,7 @@ export function myservers(){
              type:SWITCH_SUPPORT,
              servers:data
           })
-              }
+          }
         ) 
    }
 }

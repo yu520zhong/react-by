@@ -6,42 +6,56 @@ import styles from './mystyle/myadd.scss'
 import {myservers,myserveradd} from './seraction'
 
 class Aremover extends Component{
-
-
-
+	constructor(){
+		super()
+		this.state = {
+			surr:false,
+			index:null
+		}
+	}
 	render(){
+		const {myserv} = this.props
 		return(
 			<div>
 				<ul>
-					{this.props.myrever.map((todu,i)=>{
+					{this.props.Myremoves.map((todu,i)=>{
 						return(
 							<li key={i}>
-								<span>{todu.title}</span>
-								<em>删除</em>
+								<span className={i==this.state.index?styles.di:''}>{todu.title}</span>
+								<em onClick={this.removers.bind(this,i)} 
+									className={[i==this.state.index?styles.di:'',styles.myem].join(' ')}>删除</em>
 							</li>
 							)
 					})}
 				</ul>
-				<button onClick={this.myserver.bind(this)}>数据请求按钮</button>
-				
+				<button style={{width:'100%',border:'none',background:'red',height:'50px'}} onClick={this.myserver.bind(this)}>数据请求按钮</button>
+				<ul>
+					{this.state.surr?myserv&&myserv.map((todos,i,array)=>{
+						return(
+							 <li className={styles.myli} key={i}>{todos.title}</li>				
+						)
+					}):<li className={styles.myli}>数据更新</li>}
+				</ul>
 			</div>
 			)
 	}
 
-	removers(){
-		
-	}
 
+	removers(i){
+		this.setState({
+			index:i
+		})
+	}
 	myserver(){
 		this.props.dispatch(myservers())
+		this.setState({surr:true})
 	}
 }
 
 const ADDserver = (state)=>{
-	return{
-		myrever:state.Myremoves,
-		myrevesr:state.myserveradd
-	}
+	const {Myremoves,myserveradd} = state
+	const myserv = myserveradd.data
+	return {Myremoves,myserv}
 }
 
 export default connect(ADDserver)(Aremover)

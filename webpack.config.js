@@ -28,7 +28,7 @@ module.exports = {
         // 就能自动添加HotModuleReplacementPlugin，同时将服务转化为热加载形式
     },
     entry: [   //文件入口
-        './src/myapp/components/index.js'
+        './src/myapp/containers/index.js'
     ],
     output: {  //出口  编译后的文件
         path: outpath,

@@ -32,20 +32,20 @@ const Myremoves =(state = Myremove,action)=>{
   }
 }
 
-const myserveradd = (state = [],action)=>{
+const myserveradd = (state ='',action)=>{
   switch (action.type) {
     case SWITCH_SUPPORT:
      return action.servers
     default:
-      // statements_def
-      break;
+      return state
   }
 }
 
 const todoApp = combineReducers({
   visibilityFilter,
   addcpp,
-  Myremoves
+  Myremoves,
+  myserveradd
 })
 
 export default todoApp
