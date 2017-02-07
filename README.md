@@ -4,8 +4,6 @@
   用react + webpack + redux + react-router + redux-thunk + isomorphic-fetch开发
 
 ## 运行项目
-  git clone https://github.com/lumia2046/cnode.git
-  cd cnode
   npm install webpack-dev-server webpack -g (没有安装webpack的需要安装)
   npm install
   npm start
