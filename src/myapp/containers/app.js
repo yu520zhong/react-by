@@ -29,7 +29,7 @@ class Denglu extends Component{  //组建嵌套  登陆组建
 					/>
 					<input ref='posst' type='password'/>
 					<AddTodot myclick={this.qingkong.bind(this)} lost={'取消'}/>
-					<button onClick={this.handleClick.bind(this)} className={styles.onebuton}>提交</button>
+					<button onClick={this.handleClick.bind(this)} className={styles.onebuton}>登陆</button>
 				</div>
 				<Zhuye Visiterstb={this.props.Visitersta} mythis={this.state.denglu} Visiterst={this.props.Visiterst}/>
 			</div>
