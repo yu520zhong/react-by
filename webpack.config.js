@@ -12,7 +12,7 @@ module.exports = {
 	devtool: 'eval',
     devServer: {
         proxy: {
-            "/api": {
+            "/api/*": {
                 target: "https://cnodejs.org",//后台服务器所在的地址
                 secure: false
             }

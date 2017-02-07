@@ -23,7 +23,7 @@ export function addremoves() {
 
 export function myservers(){
   return dispatch=>{
-    fetch('https://cnodejs.org/api/v1/topics')
+    fetch('/api/v1/topics')
       .then(response => response.json())
       .then(data =>{
           dispatch({
