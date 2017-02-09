@@ -60,6 +60,7 @@ class Denglu extends Component{  //组建嵌套  登陆组建
   			inputname:false
   		})
   	}
+
   	onblurs(){
   		this.setState({
   			inputname:true
@@ -99,6 +100,7 @@ class App extends Component{  //总控制台
 		const {Visiterst} = this.props;
 		return(
 			<div style={{height:this.state.heights}} className={styles.oneapp}>
+				<div className={styles.myheider}>欢迎学习react</div>
 				<Denglu Visitersta={Visiterst} post={this.state.heights} dispatch={this.props.dispatch}/>
 			</div>
 			)
@@ -118,3 +120,4 @@ const select = (state)=>{   //redux数据处理
 
 
 export default connect(select)(App)
+
