@@ -28,13 +28,13 @@ class Aremover extends Component{
 							)
 					})}
 				</ul>
-				<button style={{width:'100%',border:'none',background:'red',height:'50px'}} onClick={this.myserver.bind(this)}>数据请求按钮</button>
+				<button style={{width:'100%',border:'none',background:'#413c5a',height:'50px',color:'#fff'}} onClick={this.myserver.bind(this)}>数据请求按钮</button>
 				<ul>
 					{this.state.surr?myserv&&myserv.map((todos,i,array)=>{
 						return(
 							 <li className={styles.myli} key={i}>{todos.title}</li>				
 						)
-					}):<li className={styles.myli}>数据更新</li>}
+					}):<li className={styles.myli}>数据显示地</li>}
 				</ul>
 			</div>
 			)

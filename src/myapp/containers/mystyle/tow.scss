@@ -1,6 +1,6 @@
 .oneapp{
 	width:100%;
-	background:#366666;
+	background:#2b332c;
 	background-size: 100% 100%;
 }
 .myheader{
@@ -21,7 +21,7 @@
 	margin-top: 10px;
 	border:1px solid #fff;
 	transition: all 0.3s;
-	background:#215716;
+
 	outline:none
 }
 .headerinput .headerinputt{
@@ -91,9 +91,14 @@
 }
 .myheider{
 	width:100%;
-	font-size:35px;
-	color:#fbfbfb;
+	font-size:40px;
 	text-align:center;
-	margin-top:15%;
+	margin-top:22%;
 	float:left;
+	background: url(http://i.giphy.com/fsULJFFGv8X3G.gif);
+	background-size: cover;
+	background-position: center;
+	-webkit-background-clip: text;
+	color: transparent;
+
 }

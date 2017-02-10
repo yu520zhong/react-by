@@ -20,7 +20,7 @@ class Denglu extends Component{  //组建嵌套  登陆组建
 	render(){
 		const {dispatch} = this.props;
 		return(
-			<div className={styles.oneclass} style={{paddingTop:'35%'}}>
+			<div className={styles.oneclass} style={{paddingTop:'50%'}}>
 				<div className={[this.state.denglu?'':styles.denglunonde,styles.headerinput].join(' ')}>
 				    <input className={this.state.inputname?'':styles.headerinputt} 
 						onFocus={this.onchengs.bind(this)} 
@@ -100,7 +100,7 @@ class App extends Component{  //总控制台
 		const {Visiterst} = this.props;
 		return(
 			<div style={{height:this.state.heights}} className={styles.oneapp}>
-				<div className={styles.myheider}>欢迎学习react</div>
+				<div className={styles.myheider}>欢迎学习react入门版</div>
 				<Denglu Visitersta={Visiterst} post={this.state.heights} dispatch={this.props.dispatch}/>
 			</div>
 			)
