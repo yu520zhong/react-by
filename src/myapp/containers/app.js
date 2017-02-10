@@ -76,8 +76,8 @@ class Zhuye extends Component{ //登陆后显示的内容
 			<div className={[this.props.mythis?styles.denglunonde:'',styles.mygo].join(' ')}>
 				<p>{this.props.Visiterstb}:你好，欢迎登陆</p>
 				<ul>
-					<li><Link to="tapgo">点击此处多页面</Link></li>
-					<li><Link to="myadds">点击添加删除</Link></li>
+					<li><Link style={{color:'red'}} to="tapgo">点击此处多页面</Link></li>
+					<li><Link to="myadds">点击此处添加删除,数据请求</Link></li>
 				</ul>
 			</div>
 			)
