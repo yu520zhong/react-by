@@ -5,8 +5,10 @@
 
 ## 运行项目
   npm install webpack-dev-server webpack -g (没有安装webpack的需要安装)
+
   npm install
-  npm start
+
+  npm run start
 
 ## 生产项目
   npm run build(项目生成在./build)
