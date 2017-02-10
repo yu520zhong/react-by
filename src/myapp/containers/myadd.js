@@ -21,9 +21,9 @@ class Aremover extends Component{
 					{this.props.Myremoves.map((todu,i)=>{
 						return(
 							<li key={i}>
-								<span className={i==this.state.index?styles.di:''}>{todu.title}</span>
+								<span >{todu.title}</span>
 								<em onClick={this.removers.bind(this,i)} 
-									className={[i==this.state.index?styles.di:'',styles.myem].join(' ')}>删除</em>
+									className={[styles.myem].join(' ')}>删除</em>
 							</li>
 							)
 					})}
@@ -45,6 +45,7 @@ class Aremover extends Component{
 		this.setState({
 			index:i
 		})
+	    this.props.Myremoves.splice(i,1)
 	}
 	myserver(){
 		this.props.dispatch(myservers())
