@@ -39,23 +39,23 @@ export function myservers(){
 export const VisibilityFilters = [
       {
           title: '全部', 
-          filter: 'all',
+          filter: 'all'
       },
       {
           title: '精华',
-          filter: 'good',
+          filter: 'good'
       },
       {
           title: '分享',
-          filter: 'share',
+          filter: 'share'
       },
       {
           title: '问答',
-          filter: 'ask',
+          filter: 'ask'
       },
       {
           title: '招聘',
-          filter: 'job',
+          filter: 'job'
       }
   ]
 
@@ -64,23 +64,23 @@ export const VisibilityFilters = [
 export const Myremove = [
       {
           title: '中国', 
-          filter: '1',
+          filter: '1'
       },
       {
           title: '美国',
-          filter: '2',
+          filter: '2'
       },
       {
           title: '英国',
-          filter: '3',
+          filter: '3'
       },
       {
           title: '俄罗斯',
-          filter: '4',
+          filter: '4'
       },
       {
           title: '法国',
-          filter: '5',
+          filter: '5'
       }
 ]
 

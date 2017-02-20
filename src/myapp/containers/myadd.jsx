@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import only from './mystyle/only.scss'
 import styles from './mystyle/myadd.scss'
 import {myservers,myserveradd} from './seraction'
@@ -17,6 +18,8 @@ class Aremover extends Component{
 		const {myserv} = this.props
 		return(
 			<div>
+			  <div>
+		      </div>
 				<ul>
 					{this.props.Myremoves.map((todu,i)=>{
 						return(
@@ -32,7 +35,7 @@ class Aremover extends Component{
 				<ul>
 					{this.state.surr?myserv&&myserv.map((todos,i,array)=>{
 						return(
-							 <li className={styles.myli} key={i}>{todos.title}</li>				
+							 <li className={styles.myli} key={i}>{todos.title}</li>
 						)
 					}):<li className={styles.myli}>数据显示地</li>}
 				</ul>

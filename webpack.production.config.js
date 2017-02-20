@@ -35,7 +35,7 @@ var outpath = './build/production'
 
 module.exports = {
     entry: [   //文件入口
-        './src/myapp/containers/index.js'
+        './src/myapp/containers/index'
     ],
     output: {  //出口  编译后的文件
         path: outpath,
@@ -48,6 +48,11 @@ module.exports = {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 loader: 'babel'
+            },
+            {
+                test: /\.js?$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader'
             },
             {
                 test: /\.scss$/,
