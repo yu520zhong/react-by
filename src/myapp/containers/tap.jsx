@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import {connect} from 'react-redux'
+import {Link} from 'react-router'
 import AddTodot from './buttons'
 import {addTodo} from './seraction'
 import only from './mystyle/only.scss'
@@ -36,6 +37,7 @@ class Todotaps extends Component{
 						})}
 					</ul>
 				</div>
+				<Qiantao></Qiantao>	
 			</div>
 			)
 	}
@@ -45,6 +47,21 @@ class Todotaps extends Component{
 		})
 	}
 }
+
+//嵌套路由处理
+
+class Qiantao extends Component{
+	render(){
+		return(
+			<div style={{background:'#ccc',height:'50px',textAlign:'center',lineHeight:'50px'}}>
+				<div>
+					<p><Link to='/qiantao'>我是嵌套路由显示的地方</Link></p>
+				</div>
+			</div>
+			)
+	}
+}
+
 
 
 class Taps extends Component{
@@ -58,6 +75,7 @@ class Taps extends Component{
 					<div style={{background:'#b2bf46'}}>第4页面</div>
 					<div style={{background:'#c73f42'}}>第5页面</div>
 				</Todotaps>
+				<div>{this.props.children}</div>
 			</div>
 			)
 	}

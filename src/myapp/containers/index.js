@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Route, browserHistory,hashHistory} from 'react-router';
+import { Router, Route, browserHistory,hashHistory,Link} from 'react-router';
 import {render} from 'react-dom'
 import {createStore,applyMiddleware,compose} from 'redux'
 import {Provider} from 'react-redux'
@@ -13,14 +13,19 @@ import taps from './tap'
 
 const Aremover = (location, cb) => {  //路由按需处理  示列
 	require.ensure([], require => {
-	    cb(null, require('./myadd').default)
+	    cb(null, require('./datas').default)
 	},'Aremover')
 };
 
+const Qt = (location, cb) => {  //路由按需处理  示列
+	require.ensure([], require => {
+	    cb(null, require('./qiantaoluyou').default)
+	},'Qt')
+};
 
 
 let enhancer = compose(
-        applyMiddleware(thunk, createLogger()),
+        applyMiddleware(thunk, createLogger()),  //处理think
         window.devToolsExtension ? window.devToolsExtension() : f => f
 );
 
@@ -32,8 +37,11 @@ render(
 	<Provider store={stores}>
 		<Router history={hashHistory}>
 	      <Route path="/" component={App} />
-	      <Route path="tapgo" component={taps} />
+	      <Route path="tapgo" component={taps}>	
+	      		<Route path="/qiantao" getComponent={Qt} />
+	      </Route>
 	      <Route path="myadds" getComponent={Aremover} />
+	      
 	    </Router>
 	</Provider>,
 	document.getElementById('root')

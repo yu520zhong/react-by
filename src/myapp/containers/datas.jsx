@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import {connect} from 'react-redux'
-import {Link} from 'react-router'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import only from './mystyle/only.scss'
 import styles from './mystyle/myadd.scss'
