@@ -31,7 +31,7 @@ var plugins = [
         })
     ];
     
-var outpath = './build/production'
+var outpath = './build/assets'
 
 module.exports = {
     entry: [   //文件入口
@@ -66,7 +66,7 @@ module.exports = {
             },
             {
                 test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
-                loader: 'url?limit=50000&name=[path][name].[ext]'
+                loader: 'url-loader?q=8192'
             }
         ]
     },

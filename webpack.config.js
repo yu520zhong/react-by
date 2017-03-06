@@ -30,7 +30,7 @@ module.exports = {
     output: {  //出口  编译后的文件
         path: outpath,
         publicPath: '/assets/',
-        filename: 'bundle.js'
+        filename: 'bundle.js'      
     },
     module: {
         loaders: [

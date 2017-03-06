@@ -5,7 +5,7 @@ import AddTodot from './buttons'
 import {addTodo} from './seraction'
 import only from './mystyle/only.scss'
 import styles from './mystyle/tow.scss'
-
+import mylogo from './mystyle/logobg.png'
 
 class App extends Component{  //总控制台
 	constructor(props){
@@ -21,12 +21,13 @@ class App extends Component{  //总控制台
 	render(){
 		const {Visiterst} = this.props;
 		return(
-			<div style={{height:this.state.heights}} className={styles.oneapp}>
+			<div style={{height:this.state.heights,background:'url('+mylogo+')',backgroundSize:'100% 100%'}} className={styles.oneapp}>
 				<div className={styles.myheider}>欢迎学习react入门版</div>
 				<Denglu valueparentd={this.valueparents.bind(this)} Visitersta={Visiterst} post={this.state.heights} 
 						dispatch={this.props.dispatch}
 						parentvaluse={this.state.passwords}
 						/>
+
 			</div>
 			)
 	}
