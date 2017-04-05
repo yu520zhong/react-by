@@ -2,7 +2,8 @@
   采用react技术栈，通过Redux来管理页面状态，通过Router来设置页面路由 
 
   用react + webpack + redux + react-router + redux-thunk + isomorphic-fetch开发
-
+## 预览
+[DEMO](https://xuanshanbo.github.io/react-by/public/index2.html)
 ## 运行项目
   npm install webpack-dev-server webpack -g (没有安装webpack的需要安装)
 
