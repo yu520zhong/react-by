@@ -25,7 +25,7 @@ module.exports = {
         inline: true,
     },
     entry: [  
-        './src/myapp/containers/index.js'
+        './src/myapp/containers/app'
     ],
     output: {  //出口  编译后的文件
         path: outpath,

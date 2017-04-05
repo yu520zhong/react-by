@@ -35,7 +35,7 @@ var outpath = './build/assets'
 
 module.exports = {
     entry: [   //文件入口
-        './src/myapp/containers/index'
+        './src/myapp/containers/app'
     ],
     output: {  //出口  编译后的文件
         path: outpath,
