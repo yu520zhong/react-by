@@ -4,7 +4,8 @@
 
   用react + webpack + redux + react-router + redux-thunk + isomorphic-fetch开发
 ## 预览
-[DEMO](https://xuanshanbo.github.io/react-by/public/index2.html)预览项目数据请求因本地无法跨域，请下载后使用服务代理
+[DEMO](https://xuanshanbo.github.io/react-by/public/index2.html)
+预览项目数据请求因本地无法跨域，请下载后使用服务代理
 ## 运行项目
   npm install webpack-dev-server webpack -g (没有安装webpack的需要安装)
 
