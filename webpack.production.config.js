@@ -41,6 +41,7 @@ module.exports = {
         path: outpath,
         publicPath: '/assets/', //文件夹名字
         filename: 'bundle.js' //js姓名
+        chunkFilename: '[name].[chunkhash:8].chunk.js', 
     },
     module: {
         loaders: [
