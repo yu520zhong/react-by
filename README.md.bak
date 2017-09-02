@@ -1,7 +1,6 @@
 ## 运用的技术主要有: 
 
   采用react技术栈，通过Redux来管理页面状态，通过Router来设置页面路由 
-  测试git配置是否成功
 
   用react + webpack + redux + react-router + redux-thunk + isomorphic-fetch开发
 
